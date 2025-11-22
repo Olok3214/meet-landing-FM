@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Young+Serif&display=swap');
+//font-family: "Outfit", sans-serif;
+
+$Cyan-600:#4D96A9;
+$Cyan-300:#8FE3F9;
+$Purple-600:#855FB1;
+$Purple-300:#D9B8FF;
+$Slate-900:#28283D;
+$Slate-600:#87879D;
+$Slate-300:#D1D1DF;
+$White: #FAFAFA;
+
+//Mobile design first -> tablet -> desktop
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: "Outfit", sans-serif;
+    font-size:  clamp(1rem,  1rem + 1vw, 2rem) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo{
+        margin-block-start: 3rem;
+    }
+    
+    header{
+        margin-block-start: 4rem;
+        width: 100%;
+        .heroLeftDesktop{
+            display: none;
+        }
+        .heroRightDesktop{
+            display: none;
+        }
+        .hero{
+            width: 100%;
+            img{
+                width: 100%;
+                height: auto;
+                
+            }
+        }
+
+        .headerContent{
+            margin: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1{
+                font-weight: 700;
+                color: $Slate-900;
+                text-align: center;
+                margin: 0 2rem 2rem 2rem;
+                max-width: 34rem;
+                font-size: 2.5em;
+                
+            }
+
+            p{
+                color: #87879D;
+                line-height: 1.4;
+                text-align: center;
+                font-size: 0.8em;
+                max-width: 46rem;
+            }
+
+
+            nav{
+                
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 2rem 0;
+                gap: 1rem;
+                
+
+                button:first-of-type{
+                    font-size: 0.8em;
+                    background-color: $Cyan-600;
+                    color: $White;
+                    border: none;
+                    padding: 1.3rem 3rem;
+                    font-weight: 600;
+                    border-radius: 5rem;
+                    span{
+                        color: $Cyan-300;
+
+                    }
+                    
+                    &:focus, &:hover,&:active{
+                        background-color: $Cyan-300;
+                        cursor: pointer;
+                        span{
+                            color: $White;
+                        }
+                    }
+
+                }
+
+                button:last-of-type{
+                    font-size: 0.8em;
+                    background-color: $Purple-600;
+                    color: $White;
+                    border: none;
+                    padding: 1.3rem 3rem;
+                    font-weight: 600;
+                    border-radius: 5rem;
+
+                    &:focus, &:hover,&:active{
+                        background-color: $Purple-300;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        
+    }
+
+
+    main{
+        margin-block-start: 2rem;
+        .graphic{
+
+            .leftbar{
+                height: 6rem;
+                width: 50%;
+                border-inline-end: 0.0625rem solid $Slate-300;
+            }
+
+            .zeroone{
+                width: 4rem;
+                height: 4rem;
+                margin: auto;
+                border: 0.0625rem solid $Slate-300;
+                border-radius: 5rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+
+            .photos{
+                margin: 4rem 2rem;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+
+                img{
+                    border-radius: 1rem;
+                }
+            }
+        }
+
+        section{
+            margin: 3rem 2rem;
+            margin-block-end: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p:first-of-type{
+                text-align: center;
+                font-size: 0.6em;
+                font-weight: 600;
+                letter-spacing: 0.25rem;
+                color: $Cyan-600;
+            }
+
+            h2{
+                margin: 1rem 1rem;
+                text-align: center;
+                max-width: 36rem;
+                
+            }
+
+            p:last-of-type{
+                color: #87879D;
+                line-height: 1.4;
+                text-align: center;
+                font-size: 0.8em;
+                max-width: 46rem;
+            }
+
+        }
+    }
+
+    footer{
+        width: 100%;
+        .graphic2{
+            position: relative;
+            top: 2rem;
+            z-index: 1;
+            .leftbar2{
+                    height: 6rem;
+                    width: 50%;
+                    border-inline-end: 0.0625rem solid $Slate-300;
+                }
+
+                .zerotwo{
+                    width: 4rem;
+                    height: 4rem;
+                    margin: auto;
+                    border: 0.0625rem solid $Slate-300;
+                    border-radius: 5rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $White;
+                }
+        }
+
+        .realFooter{
+            box-sizing: border-box;
+            padding: 3.5rem 2rem 4rem 2rem;
+            background-image: url(assets/mobile/image-footer.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top;
+            box-shadow: inset 0 0 0 1000px #4d97a9a8;
+            
+            color: $White;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            
+            }
+
+            h2{ 
+                margin: 1rem 1rem;
+                text-align: center;
+                max-width: 36rem;
+            }
+
+            p:last-of-type{
+                margin-block-end: 1rem;
+                line-height: 1.4;
+                text-align: center;
+                font-size: 0.8em;
+                max-width: 46rem;
+            }
+            button:last-of-type{
+                margin-block-start: 2rem;
+                font-size: 0.8em;
+                background-color: $Purple-600;
+                color: $White;
+                border: none;
+                padding: 1.3rem 3rem;
+                font-weight: 600;
+                border-radius: 5rem;
+                
+                &:focus, &:hover,&:active{
+                    background-color: $Purple-300;
+                    cursor: pointer;
+                }                
+            }
+
+
+
+
+        
+    }
+}
+
+
+
+//Tablet
+@media all and (min-width: 768px){
+    body>main>.graphic>.photos{
+        
+        margin-inline-start: 4rem;
+        margin-inline-end: 4rem;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    body>footer>.realFooter{
+        background-image: url(assets/tablet/image-footer.jpg) ;
+    }
+    body>header>.headerContent>nav{
+        flex-direction: row;
+    }
+}
+
+//Desktop
+@media all and (min-width: 1440px){
+    body>main>.graphic>.photos{
+        margin-inline-start: 10rem;
+        margin-inline-end: 10rem;
+        
+    }
+
+    body>footer>.realFooter{
+       background-image: url(assets/desktop/image-footer.jpg);
+       flex-direction: row;
+       height: 25rem;
+       padding-inline-start: 6rem;
+       padding-inline-end: 6rem;
+       gap: 4rem;
+       align-content: center;
+       justify-items: center;
+        h2{
+            text-align: left;
+            max-width: 20rem;
+            
+        }
+        p{
+            text-align: left;
+            
+            
+        }
+        button.dowoland{
+            text-wrap: nowrap;
+        }
+    }
+
+    body>header>.headerContent{
+        h1{
+            max-width: 30rem;
+        }
+        p{
+            max-width: 38rem;
+        }
+    }
+
+    body>header{
+        .hero{
+            img{
+                display: none;
+            }
+        }
+        .heroLeftDesktop{
+            display: block;
+            position: absolute;
+            width: 28vw;
+            max-width: 42.5rem;
+        }
+        .heroRightDesktop{
+            display: block;
+            position: absolute;
+            right: 0;
+            width: 28vw;
+            max-width: 42.5rem;
+            
+            
+        }
+        
+    }
+    
+}
